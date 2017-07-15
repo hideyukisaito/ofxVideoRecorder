@@ -220,15 +220,18 @@ void ofxAudioDataWriterThread::setPipeNonBlocking(){
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
-ofxVideoRecorder::ofxVideoRecorder(){
-    bIsInitialized = false;
-    ffmpegLocation = "ffmpeg";
-    videoCodec = "mpeg4";
-    audioCodec = "pcm_s16le";
-    videoBitrate = "2000k";
-    audioBitrate = "128k";
-    pixelFormat = "rgb24";
-    outputPixelFormat = "";
+ofxVideoRecorder::ofxVideoRecorder()
+: bIsInitialized{ false }
+, bIsRecording{ false }
+, bIsPaused{ false }
+, ffmpegLocation{ "ffmpeg" }
+, videoCodec{ "mpeg4" }
+, audioCodec{ "pcm_s16le" }
+, videoBitrate{ "2000k" }
+, audioBitrate{ "128k" }
+, pixelFormat{ "rgb24" }
+, outputPixelFormat{ "" }
+{
 }
 
 //--------------------------------------------------------------
